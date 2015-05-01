@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical" >
+
+    <TextView
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="10dp"
+        style="@style/title_text_style"
+        android:padding="10dp"
+        android:text="Share your invition code to earn extra credits"
+        android:textSize="16.0sp" />
+
+    <ListView
+        android:id="@+id/lvShare"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="10dp"
+        android:layout_marginRight="10dp"
+        android:divider="@color/mainColor"
+        android:dividerHeight="2dp" >
+    </ListView>
+
+    <TextView
+        style="@style/title_text_style"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="10dp"
+        android:padding="5dp"
+        android:text="Both you and your friends will receive 200 credits"
+        android:textSize="16.0sp" />
+
+</LinearLayout>

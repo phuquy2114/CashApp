@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="@color/white" >
+
+    <TextView
+        android:id="@+id/nooffer"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:text="Sorry !There are no offer in your country at the moment."
+        android:layout_margin="10dp"
+        android:textColor="@color/mainColor"
+        android:textStyle="bold"
+        android:textSize="16sp"
+        android:visibility="gone"
+        />
+
+    <ListView
+        android:id="@+id/banners"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:divider="@color/mainColor"
+        android:dividerHeight="2dp" >
+    </ListView>
+
+</LinearLayout>

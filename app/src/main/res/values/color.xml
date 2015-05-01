@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <color name="mainColor">#438F77</color>
+    <color name="mainColorDark">#33691E</color>
+    <color name="tabsScrollColor">#FF4081</color>
+    <color name="black_text">#000</color>
+    <color name="offer_list_item_bg">#fff5ecf0</color>
+    <color name="offer_list_item_bg_press">#fff5dff0</color>
+    <color name="transparent">#00000000</color>
+    <color name="white">#fff</color>
+    <color name="orange">#FB5529</color>
+
+    <color name="color_default_tab">#FFFAF0</color>
+
+</resources>

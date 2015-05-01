@@ -1,0 +1,35 @@
+apply plugin: 'com.android.application'
+
+android {
+    compileSdkVersion 21
+    buildToolsVersion "21.1.2"
+
+    defaultConfig {
+        applicationId "android.phuquy.dev.cashmedia"
+        minSdkVersion 13
+        targetSdkVersion 21
+        versionCode 1
+        versionName "1.0"
+    }
+    buildTypes {
+        release {
+            minifyEnabled false
+            proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
+        }
+    }
+}
+
+dependencies {
+    compile fileTree(dir: 'libs', include: ['*.jar'])
+    compile 'com.android.support:appcompat-v7:22.0.0'
+    compile files('libs/AarkiAndroidSDK.jar')
+    compile files('libs/gson-2.3.1.jar')
+    compile files('libs/picasso-2.4.0.jar')
+    compile files('libs/sponsorpay-android-sdk-7.1.1.jar')
+    compile files('libs/supersonic_sdk_5.14.jar')
+    compile files('libs/WoobiSDK_v1.3.4.jar')
+    compile 'com.android.support:support-v4:22.0.0'
+    compile 'com.google.android.gms:play-services:7.0.0'
+    compile 'com.google.android.gms:play-services:7.0.0'
+    compile project(':libraries:libraryindicator')
+}
