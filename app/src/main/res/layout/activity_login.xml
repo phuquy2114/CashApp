@@ -4,15 +4,11 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent">
 
-    <LinearLayout
-        android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:orientation="vertical">
-
         <RelativeLayout
             android:id="@+id/layout_slideshow"
             android:layout_width="match_parent"
-            android:layout_height="100dp"
+            android:layout_height="250dp"
+            android:layout_alignParentTop="true"
             android:background="#6fca7b">
 
             <android.support.v4.view.ViewPager
@@ -101,5 +97,5 @@
                 android:text="register"
                 android:textColor="#000" />
         </LinearLayout>
-    </LinearLayout>
+
 </RelativeLayout>
