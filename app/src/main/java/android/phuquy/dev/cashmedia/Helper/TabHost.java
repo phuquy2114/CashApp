@@ -5,6 +5,7 @@ import android.phuquy.dev.cashmedia.R;
 import android.util.AttributeSet;
 import android.view.LayoutInflater;
 import android.view.View;
+import android.widget.ImageView;
 import android.widget.LinearLayout;
 import android.widget.RelativeLayout;
 import android.widget.TextView;
@@ -25,6 +26,11 @@ public class TabHost extends RelativeLayout implements View.OnClickListener {
     private LinearLayout mViewTabThree;
     private LinearLayout mViewTabFour;
     private OnItemClickListtener mListten;
+    private ImageView mImgTabOne;
+    private ImageView mImgTabOTwo;
+    private ImageView mImgTabThree;
+    private ImageView mImgTabFour;
+
 
     public TabHost(Context context) {
         super(context);
@@ -62,6 +68,11 @@ public class TabHost extends RelativeLayout implements View.OnClickListener {
         mViewTabThree = (LinearLayout) view.findViewById(R.id.view_tab_three);
         mViewTabFour = (LinearLayout) view.findViewById(R.id.view_tab_four);
 
+        mImgTabOne = (ImageView) view.findViewById(R.id.img_tab_one);
+        mImgTabOTwo = (ImageView) view.findViewById(R.id.img_tab_two);
+        mImgTabThree = (ImageView) view.findViewById(R.id.img_tab_three);
+        mImgTabFour = (ImageView) view.findViewById(R.id.img_tab_four);
+
         setEvent();
         onItemClickEvent(0);
     }
@@ -69,15 +80,19 @@ public class TabHost extends RelativeLayout implements View.OnClickListener {
     public void setDefault() {
         //Tab One
         mViewTabOne.setBackgroundColor(0xFF438F77);
+        mImgTabOne.setImageResource(R.drawable.icon_top_off);
         mTxtTabOne.setTextColor(0xFF33691E);
 
         mViewTabTwo.setBackgroundColor(0xFF438F77);
+        mImgTabOTwo.setImageResource(R.drawable.icon_payplay_off);
         mTxtTabTwo.setTextColor(0xFF33691E);
 
         mViewTabThree.setBackgroundColor(0xFF438F77);
+        mImgTabThree.setImageResource(R.drawable.icon_share_off);
         mTxtTabThree.setTextColor(0xFF33691E);
 
         mViewTabFour.setBackgroundColor(0xFF438F77);
+        mImgTabFour.setImageResource(R.drawable.icon_setting_off);
         mTxtTabFour.setTextColor(0xFF33691E);
     }
 
@@ -92,15 +107,19 @@ public class TabHost extends RelativeLayout implements View.OnClickListener {
         setDefault();
         if (position == 0) {
             mViewTabOne.setBackgroundColor(0xFF32CD32);
+            mImgTabOne.setImageResource(R.drawable.icon_top_on);
             mTxtTabOne.setTextColor(0xFFFFFFFF);
         } else if (position == 1) {
             mViewTabTwo.setBackgroundColor(0xFF32CD32);
+            mImgTabOTwo.setImageResource(R.drawable.icon_payplay_on);
             mTxtTabTwo.setTextColor(0xFFFFFFFF);
         } else if (position == 2) {
             mViewTabThree.setBackgroundColor(0xFF32CD32);
+            mImgTabThree.setImageResource(R.drawable.icon_share_on);
             mTxtTabThree.setTextColor(0xFFFFFFFF);
         } else if (position == 3) {
             mViewTabFour.setBackgroundColor(0xFF32CD32);
+            mImgTabFour.setImageResource(R.drawable.icon_setting_on);
             mTxtTabFour.setTextColor(0xFFFFFFFF);
         } else {
             Toast.makeText(getContext(), "Tab Default ", Toast.LENGTH_SHORT).show();
