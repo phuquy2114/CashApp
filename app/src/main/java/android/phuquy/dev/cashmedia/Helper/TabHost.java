@@ -106,21 +106,21 @@ public class TabHost extends RelativeLayout implements View.OnClickListener {
     public void onItemClickEvent(int position) {
         setDefault();
         if (position == 0) {
-            mViewTabOne.setBackgroundColor(0xFF32CD32);
+            mViewTabOne.setBackgroundColor(0xFFf5ecf0);
             mImgTabOne.setImageResource(R.drawable.icon_top_on);
-            mTxtTabOne.setTextColor(0xFFFFFFFF);
+            mTxtTabOne.setTextColor(0xFF000000);
         } else if (position == 1) {
-            mViewTabTwo.setBackgroundColor(0xFF32CD32);
+            mViewTabTwo.setBackgroundColor(0xFFf5ecf0);
             mImgTabOTwo.setImageResource(R.drawable.icon_payplay_on);
-            mTxtTabTwo.setTextColor(0xFFFFFFFF);
+            mTxtTabTwo.setTextColor(0xFF000000);
         } else if (position == 2) {
-            mViewTabThree.setBackgroundColor(0xFF32CD32);
+            mViewTabThree.setBackgroundColor(0xFFf5ecf0);
             mImgTabThree.setImageResource(R.drawable.icon_share_on);
-            mTxtTabThree.setTextColor(0xFFFFFFFF);
+            mTxtTabThree.setTextColor(0xFF000000);
         } else if (position == 3) {
-            mViewTabFour.setBackgroundColor(0xFF32CD32);
+            mViewTabFour.setBackgroundColor(0xFFf5ecf0);
             mImgTabFour.setImageResource(R.drawable.icon_setting_on);
-            mTxtTabFour.setTextColor(0xFFFFFFFF);
+            mTxtTabFour.setTextColor(0xFF000000);
         } else {
             Toast.makeText(getContext(), "Tab Default ", Toast.LENGTH_SHORT).show();
         }
