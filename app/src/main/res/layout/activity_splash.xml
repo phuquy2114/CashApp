@@ -2,50 +2,64 @@
 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:orientation="vertical">
+    android:orientation="vertical"
+    android:background="@drawable/background_splash">
 
     <ImageView
         android:id="@+id/img_view"
         android:layout_width="match_parent"
-        android:background="@drawable/ic_image_bacground"
-        android:layout_height="match_parent" />
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        android:src="@drawable/logo_name" />
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true"
+        android:gravity="center_vertical"
+        android:layout_marginBottom="20dp"
+        android:textSize="20sp"
+        android:textColor="@android:color/white"
+        android:text="@string/title_splash_bottom"/>
 
     <RelativeLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_centerInParent="true"
-        android:layout_marginRight="16dp"
         android:layout_marginLeft="16dp"
+        android:layout_marginRight="16dp"
+        android:layout_marginTop="20dp"
         android:background="@android:color/transparent"
         android:orientation="horizontal">
 
         <ProgressBar
             android:id="@+id/progress_bar_one"
             android:layout_width="wrap_content"
-            android:layout_marginLeft="16dp"
             android:layout_height="wrap_content"
             android:layout_alignParentLeft="true"
             android:layout_centerVertical="true"
-            android:layout_gravity="left" />
+            android:layout_gravity="left"
+            android:layout_marginLeft="16dp" />
 
-        <TextView
+        <ImageView
             android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
             android:layout_centerHorizontal="true"
             android:layout_centerVertical="true"
-            android:layout_height="wrap_content"
             android:layout_gravity="center"
-            android:textColor="@android:color/white"
-            android:textSize="15sp"
-            android:typeface="normal"
-            android:text="CASH APP" />
+            android:src="@drawable/logo_name"
+            android:layout_marginLeft="70dp"
+            android:layout_marginRight="70dp"
+            android:background="@android:color/transparent"
+            android:textColor="@android:color/white" />
 
         <ProgressBar
             android:id="@+id/progress_bar_two"
-            android:layout_centerVertical="true"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginRight="16dp"
             android:layout_alignParentRight="true"
-            android:layout_gravity="right" />
+            android:layout_centerVertical="true"
+            android:layout_gravity="right"
+            android:layout_marginRight="16dp" />
     </RelativeLayout>
 </RelativeLayout>

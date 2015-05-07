@@ -67,12 +67,14 @@ public class LoginActivity extends BaseActivity implements OnClickListener,Reque
         mViewPager.setAdapter(mImagePagerAdapter);
         mCirclePageIndicator.setViewPager(mViewPager);
 
-        tvRegister.setPaintFlags(tvRegister.getPaintFlags() |   Paint.UNDERLINE_TEXT_FLAG);
+        tvRegister.setPaintFlags(tvRegister.getPaintFlags() | Paint.UNDERLINE_TEXT_FLAG);
         tvRegister.setText("Dont Have an Account");
 
         // Value  defauce
         edtEmail.setText("hoangtuthattinh2114@gmail.com");
         edtPass.setText("phuquy142011");
+
+
     }
 
     @Override

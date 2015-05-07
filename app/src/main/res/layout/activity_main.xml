@@ -9,19 +9,17 @@
     <RelativeLayout
         android:layout_width="match_parent"
         android:layout_height="60dp"
-        android:background="@color/mainColor" >
+        android:background="@color/mainActionBar" >
 
-        <TextView
+        <ImageView
             android:id="@+id/title_app_name"
-            android:layout_width="wrap_content"
+            android:layout_width="150dp"
             android:layout_height="wrap_content"
-            android:layout_centerVertical="true"
-            android:layout_marginLeft="15.0dip"
-            android:text="@string/app_name"
-            android:textColor="@color/white"
-            android:textSize="20.0sp"
-            android:textStyle="bold"
-            tools:ignore="RtlHardcoded" />
+            android:layout_margin="10dp"
+            android:layout_alignParentLeft="true"
+            android:background="@android:color/transparent"
+            android:src="@drawable/icon_logo_app_name"
+            />
 
         <RelativeLayout
             android:id="@+id/counter_layout"
@@ -41,19 +39,19 @@
                 android:paddingLeft="10.0dip"
                 android:paddingRight="10.0dip"
                 android:text="0"
-                android:textColor="#fff"
+                android:textColor="#000"
                 android:textSize="20.0sp"
                 tools:ignore="RtlHardcoded" />
 
             <ImageView
                 android:id="@+id/score_logo"
-                android:layout_width="45.0dip"
-                android:layout_height="45.0dip"
+                android:layout_width="35.0dip"
+                android:layout_height="35.0dip"
                 android:layout_centerVertical="true"
                 android:layout_marginRight="-7.0dip"
                 android:layout_toLeftOf="@id/score_count"
                 android:padding="4.0dip"
-                android:src="@drawable/ic_action_refresh"
+                android:src="@drawable/icon_refresh"
                 tools:ignore="ContentDescription,RtlHardcoded" />
         </RelativeLayout>
     </RelativeLayout>

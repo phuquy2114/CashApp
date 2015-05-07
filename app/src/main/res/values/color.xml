@@ -11,6 +11,7 @@
     <color name="white">#fff</color>
     <color name="orange">#FB5529</color>
 
+    <color name="mainActionBar">#FFFF00</color>
     <color name="color_default_tab">#FFFAF0</color>
 
 </resources>

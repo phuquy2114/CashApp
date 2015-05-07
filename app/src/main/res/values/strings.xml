@@ -1,9 +1,11 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
 
-    <string name="app_name">Cash Media</string>
+    <string name="app_name">ChupaCash</string>
     <string name="hello_world">Hello world!</string>
     <string name="action_settings">Settings</string>
     <string name="web">http://app.superpublisher.net/</string>
+
+    <string name="title_splash_bottom">The Beast Money - Making App</string>
 
 </resources>
