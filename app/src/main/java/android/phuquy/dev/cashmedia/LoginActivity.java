@@ -9,10 +9,8 @@ import android.phuquy.dev.cashmedia.Helper.BaseActivity;
 import android.phuquy.dev.cashmedia.Utils.Config;
 import android.phuquy.dev.cashmedia.Utils.Request;
 import android.phuquy.dev.cashmedia.Utils.RequestCallback;
-import android.phuquy.dev.cashmedia.adapter.ImagePagerAdapter;
 import android.phuquy.dev.cashmedia.libraris.SecurePreferences;
 import android.phuquy.dev.cashmedia.model.Login;
-import android.support.v4.view.ViewPager;
 import android.util.Log;
 import android.view.View;
 import android.view.View.OnClickListener;
@@ -22,7 +20,6 @@ import android.widget.TextView;
 import android.widget.Toast;
 
 import com.google.gson.Gson;
-import com.viewpagerindicator.CirclePageIndicator;
 
 import java.util.HashMap;
 
@@ -33,10 +30,8 @@ public class LoginActivity extends BaseActivity implements OnClickListener,Reque
 	private Button btnLogin;
 	private String email,password;
 	private ProgressDialog pdialog;
-    private ImagePagerAdapter  mImagePagerAdapter;
-    private ViewPager mViewPager;
-    private CirclePageIndicator mCirclePageIndicator;
-	private Button mBtnLoginFacebook;
+
+
 
 
 	@Override
@@ -51,21 +46,20 @@ public class LoginActivity extends BaseActivity implements OnClickListener,Reque
 
     @Override
     protected void initialize() {
-        mViewPager = (ViewPager) findViewById(R.id.pager);
-        mCirclePageIndicator = (CirclePageIndicator) findViewById(R.id.indicator);
+//        mViewPager = (ViewPager) findViewById(R.id.pager);
+//        mCirclePageIndicator = (CirclePageIndicator) findViewById(R.id.indicator);
         tvRegister = (TextView) findViewById(R.id.tvRegister);
         edtEmail = (EditText) findViewById(R.id.edtEmail);
         edtPass = (EditText) findViewById(R.id.edtPass);
         btnLogin = (Button) findViewById(R.id.btnLogin);
-		mBtnLoginFacebook = (Button) findViewById(R.id.login_button_facebook);
 
     }
 
     @Override
     protected void setValue() {
-        mImagePagerAdapter = new ImagePagerAdapter(getApplicationContext());
-        mViewPager.setAdapter(mImagePagerAdapter);
-        mCirclePageIndicator.setViewPager(mViewPager);
+//        mImagePagerAdapter = new ImagePagerAdapter(getApplicationContext());
+//        mViewPager.setAdapter(mImagePagerAdapter);
+//        mCirclePageIndicator.setViewPager(mViewPager);
 
         tvRegister.setPaintFlags(tvRegister.getPaintFlags() | Paint.UNDERLINE_TEXT_FLAG);
         tvRegister.setText("Dont Have an Account");
@@ -81,7 +75,7 @@ public class LoginActivity extends BaseActivity implements OnClickListener,Reque
     protected void setEvent() {
         btnLogin.setOnClickListener(this);
         tvRegister.setOnClickListener(this);
-		mBtnLoginFacebook.setOnClickListener(this);
+
     }
 
     @Override
@@ -105,9 +99,6 @@ public class LoginActivity extends BaseActivity implements OnClickListener,Reque
 			startActivity(intent);
 		}
 
-		if (v.getId()== R.id.login_button_facebook){
-			Toast.makeText(getApplicationContext(),"Not Finish LoginFacebook",Toast.LENGTH_SHORT).show();
-		}
 	}
 
 	@Override

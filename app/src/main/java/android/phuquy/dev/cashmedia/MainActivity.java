@@ -37,6 +37,8 @@ public class MainActivity extends FragmentActivity implements RequestCallback,
 	private ImageView refresh;
 	private ProgressDialog dialog;
 	public static String link;
+	private TextView mTxtTitleHeader;
+
 
 	@Override
 	protected void onCreate(Bundle savedInstanceState) {
@@ -50,7 +52,7 @@ public class MainActivity extends FragmentActivity implements RequestCallback,
     private void initialize() {
         tvpoints = (TextView) findViewById(R.id.score_count);
         refresh = (ImageView) findViewById(R.id.score_logo);
-
+		mTxtTitleHeader = (TextView) findViewById(R.id.title_app_name);
     }
 
     private void setValues() {
@@ -320,5 +322,8 @@ public class MainActivity extends FragmentActivity implements RequestCallback,
 		Request request = new Request(data, this, 6);
 		request.execute();
 	}
+
+
+
 
 }

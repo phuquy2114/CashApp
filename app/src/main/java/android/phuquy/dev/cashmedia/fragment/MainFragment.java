@@ -14,11 +14,12 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 
-public class MainFragment extends BaseFragment implements  TabHost.OnItemClickListtener {
-	private TabHost mTab;
+public class MainFragment extends BaseFragment implements TabHost.OnItemClickListtener {
+    private TabHost mTab;
     private MainFragmentAdapter mainFragmentAdapter;
     private HackyViewPager mViewPager;
     private View view;
+    private onChangeTitleHeaderBar mListtener;
 
     @Override
     public void onActivityResult(int requestCode, int resultCode, Intent data) {
@@ -26,11 +27,11 @@ public class MainFragment extends BaseFragment implements  TabHost.OnItemClickLi
     }
 
     @Override
-	public View onCreateView(LayoutInflater inflater, ViewGroup container,
-			Bundle savedInstanceState) {
-		 view=  inflater.inflate(R.layout.fragment_main, container, false);
-		return view;
-	}
+    public View onCreateView(LayoutInflater inflater, ViewGroup container,
+                             Bundle savedInstanceState) {
+        view = inflater.inflate(R.layout.fragment_main, container, false);
+        return view;
+    }
 
     @Override
     public void onActivityCreated(@Nullable Bundle savedInstanceState) {
@@ -43,11 +44,9 @@ public class MainFragment extends BaseFragment implements  TabHost.OnItemClickLi
     public void initialize() {
         mTab = (TabHost) view.findViewById(R.id.tab_host);
         mViewPager = (HackyViewPager) view.findViewById(R.id.viewpager);
-
-
     }
 
-    public void setValue () {
+    public void setValue() {
         mainFragmentAdapter = new MainFragmentAdapter(getChildFragmentManager());
         mViewPager.setAdapter(mainFragmentAdapter);
     }
@@ -77,5 +76,17 @@ public class MainFragment extends BaseFragment implements  TabHost.OnItemClickLi
     @Override
     public void ClickItemTabHost(int position) {
         mViewPager.setCurrentItem(position);
+    }
+
+    public onChangeTitleHeaderBar getmListtener() {
+        return mListtener;
+    }
+
+    public void setListtener() {
+        this.mListtener = mListtener;
+    }
+
+    public interface onChangeTitleHeaderBar {
+        public void onTextViewChange(int i);
     }
 }

@@ -8,7 +8,6 @@ import android.view.View;
 import android.widget.ImageView;
 import android.widget.LinearLayout;
 import android.widget.RelativeLayout;
-import android.widget.TextView;
 import android.widget.Toast;
 
 /**
@@ -17,10 +16,7 @@ import android.widget.Toast;
 public class TabHost extends RelativeLayout implements View.OnClickListener {
 
     private View view;
-    private TextView mTxtTabOne;
-    private TextView mTxtTabTwo;
-    private TextView mTxtTabThree;
-    private TextView mTxtTabFour;
+
     private LinearLayout mViewTabOne;
     private LinearLayout mViewTabTwo;
     private LinearLayout mViewTabThree;
@@ -56,12 +52,7 @@ public class TabHost extends RelativeLayout implements View.OnClickListener {
     public void init(Context mContext) {
         view = LayoutInflater.from(mContext).inflate(R.layout.tabhost, null);
         addView(view);
-
         //initialize
-        mTxtTabOne = (TextView) view.findViewById(R.id.txt_tab_one);
-        mTxtTabTwo = (TextView) view.findViewById(R.id.txt_tab_two);
-        mTxtTabThree = (TextView) view.findViewById(R.id.txt_tab_three);
-        mTxtTabFour = (TextView) view.findViewById(R.id.txt_tab_four);
 
         mViewTabOne = (LinearLayout) view.findViewById(R.id.view_tab_one);
         mViewTabTwo = (LinearLayout) view.findViewById(R.id.view_tab_two);
@@ -79,21 +70,21 @@ public class TabHost extends RelativeLayout implements View.OnClickListener {
 
     public void setDefault() {
         //Tab One
-        mViewTabOne.setBackgroundColor(0xFF438F77);
+        mViewTabOne.setBackgroundColor(0xFFe78c28);
         mImgTabOne.setImageResource(R.drawable.icon_top_off);
-        mTxtTabOne.setTextColor(0xFF33691E);
+        //mTxtTabOne.setTextColor(0xFF33691E);
 
-        mViewTabTwo.setBackgroundColor(0xFF438F77);
+        mViewTabTwo.setBackgroundColor(0xFFe78c28);
         mImgTabOTwo.setImageResource(R.drawable.icon_payplay_off);
-        mTxtTabTwo.setTextColor(0xFF33691E);
+      //  mTxtTabTwo.setTextColor(0xFF33691E);
 
-        mViewTabThree.setBackgroundColor(0xFF438F77);
+        mViewTabThree.setBackgroundColor(0xFFe78c28);
         mImgTabThree.setImageResource(R.drawable.icon_share_off);
-        mTxtTabThree.setTextColor(0xFF33691E);
+       // mTxtTabThree.setTextColor(0xFF33691E);
 
-        mViewTabFour.setBackgroundColor(0xFF438F77);
+        mViewTabFour.setBackgroundColor(0xFFe78c28);
         mImgTabFour.setImageResource(R.drawable.icon_setting_off);
-        mTxtTabFour.setTextColor(0xFF33691E);
+       // mTxtTabFour.setTextColor(0xFF33691E);
     }
 
     public void setEvent() {
@@ -106,21 +97,21 @@ public class TabHost extends RelativeLayout implements View.OnClickListener {
     public void onItemClickEvent(int position) {
         setDefault();
         if (position == 0) {
-            mViewTabOne.setBackgroundColor(0xFFf5ecf0);
+            mViewTabOne.setBackgroundColor(0xFFFFFFFF);
             mImgTabOne.setImageResource(R.drawable.icon_top_on);
-            mTxtTabOne.setTextColor(0xFF000000);
+            //mTxtTabOne.setTextColor(0xFF000000);
         } else if (position == 1) {
-            mViewTabTwo.setBackgroundColor(0xFFf5ecf0);
+            mViewTabTwo.setBackgroundColor(0xFFFFFFFF);
             mImgTabOTwo.setImageResource(R.drawable.icon_payplay_on);
-            mTxtTabTwo.setTextColor(0xFF000000);
+           // mTxtTabTwo.setTextColor(0xFF000000);
         } else if (position == 2) {
-            mViewTabThree.setBackgroundColor(0xFFf5ecf0);
+            mViewTabThree.setBackgroundColor(0xFFFFFFFF);
             mImgTabThree.setImageResource(R.drawable.icon_share_on);
-            mTxtTabThree.setTextColor(0xFF000000);
+           // mTxtTabThree.setTextColor(0xFF000000);
         } else if (position == 3) {
-            mViewTabFour.setBackgroundColor(0xFFf5ecf0);
+            mViewTabFour.setBackgroundColor(0xFFFFFFFF);
             mImgTabFour.setImageResource(R.drawable.icon_setting_on);
-            mTxtTabFour.setTextColor(0xFF000000);
+         //   mTxtTabFour.setTextColor(0xFF000000);
         } else {
             Toast.makeText(getContext(), "Tab Default ", Toast.LENGTH_SHORT).show();
         }

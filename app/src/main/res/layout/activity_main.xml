@@ -11,14 +11,16 @@
         android:layout_height="60dp"
         android:background="@color/mainActionBar" >
 
-        <ImageView
+        <TextView
             android:id="@+id/title_app_name"
             android:layout_width="150dp"
             android:layout_height="wrap_content"
-            android:layout_margin="10dp"
+            android:layout_margin="15dp"
             android:layout_alignParentLeft="true"
-            android:background="@android:color/transparent"
-            android:src="@drawable/icon_logo_app_name"
+            android:textSize="24sp"
+            android:typeface="normal"
+            android:textColor="@android:color/white"
+            android:text="Share"
             />
 
         <RelativeLayout
