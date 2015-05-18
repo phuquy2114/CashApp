@@ -304,7 +304,7 @@ public class MainActivity extends FragmentActivity implements RequestCallback,
 	}
 	
 	public static String getLink(){
-		Log.i(TAG,link);
+		Log.i(TAG, link);
 		return link;
 	}
 
@@ -321,6 +321,18 @@ public class MainActivity extends FragmentActivity implements RequestCallback,
 		data.put("uid", ref.getString("uid"));
 		Request request = new Request(data, this, 6);
 		request.execute();
+	}
+
+	public void setHeaderTitle(int position) {
+		if (position==0){
+			mTxtTitleHeader.setText("Offers");
+		} else if (position==1){
+			mTxtTitleHeader.setText("Reward");
+		} else if (position==2){
+			mTxtTitleHeader.setText("Share");
+		}else if (position==3){
+			mTxtTitleHeader.setText("Settings");
+		}
 	}
 
 

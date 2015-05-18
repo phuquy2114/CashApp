@@ -16,11 +16,13 @@
             android:layout_width="150dp"
             android:layout_height="wrap_content"
             android:layout_margin="15dp"
-            android:layout_alignParentLeft="true"
             android:textSize="24sp"
+            android:gravity="center"
             android:typeface="normal"
+            android:textStyle="bold"
+            android:layout_centerHorizontal="true"
             android:textColor="@android:color/white"
-            android:text="Share"
+            android:text="Offers"
             />
 
         <RelativeLayout
@@ -41,7 +43,7 @@
                 android:paddingLeft="10.0dip"
                 android:paddingRight="10.0dip"
                 android:text="0"
-                android:textColor="#000"
+                android:textColor="#fff"
                 android:textSize="20.0sp"
                 tools:ignore="RtlHardcoded" />
 
@@ -53,7 +55,7 @@
                 android:layout_marginRight="-7.0dip"
                 android:layout_toLeftOf="@id/score_count"
                 android:padding="4.0dip"
-                android:src="@drawable/icon_refresh"
+                android:src="@drawable/ic_refresh_loading_white"
                 tools:ignore="ContentDescription,RtlHardcoded" />
         </RelativeLayout>
     </RelativeLayout>

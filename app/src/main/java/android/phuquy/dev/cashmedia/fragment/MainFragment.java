@@ -6,6 +6,7 @@ import android.os.Bundle;
 import android.phuquy.dev.cashmedia.Helper.BaseFragment;
 import android.phuquy.dev.cashmedia.Helper.HackyViewPager;
 import android.phuquy.dev.cashmedia.Helper.TabHost;
+import android.phuquy.dev.cashmedia.MainActivity;
 import android.phuquy.dev.cashmedia.R;
 import android.phuquy.dev.cashmedia.adapter.MainFragmentAdapter;
 import android.support.annotation.Nullable;
@@ -19,7 +20,7 @@ public class MainFragment extends BaseFragment implements TabHost.OnItemClickLis
     private MainFragmentAdapter mainFragmentAdapter;
     private HackyViewPager mViewPager;
     private View view;
-    private onChangeTitleHeaderBar mListtener;
+
 
     @Override
     public void onActivityResult(int requestCode, int resultCode, Intent data) {
@@ -61,6 +62,7 @@ public class MainFragment extends BaseFragment implements TabHost.OnItemClickLis
             @Override
             public void onPageSelected(int position) {
                 mTab.onItemClickEvent(position);
+                ((MainActivity)getActivity()).setHeaderTitle(position);
             }
 
             @Override
@@ -76,17 +78,5 @@ public class MainFragment extends BaseFragment implements TabHost.OnItemClickLis
     @Override
     public void ClickItemTabHost(int position) {
         mViewPager.setCurrentItem(position);
-    }
-
-    public onChangeTitleHeaderBar getmListtener() {
-        return mListtener;
-    }
-
-    public void setListtener() {
-        this.mListtener = mListtener;
-    }
-
-    public interface onChangeTitleHeaderBar {
-        public void onTextViewChange(int i);
     }
 }

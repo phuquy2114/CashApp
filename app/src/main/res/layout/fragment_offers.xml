@@ -3,7 +3,7 @@
     android:id="@android:id/list"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:divider="@color/mainColor"
+    android:divider="@color/mainActionBar"
     android:dividerHeight="2dp" 
     android:paddingLeft="10dp"
     android:paddingRight="10dp">
