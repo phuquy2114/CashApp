@@ -4,14 +4,16 @@
     android:layout_height="match_parent"
     android:orientation="vertical" >
 
+    <!--style="@style/title_text_style"-->
     <TextView
         android:layout_width="fill_parent"
         android:layout_height="wrap_content"
         android:layout_margin="10dp"
-        style="@style/title_text_style"
         android:padding="10dp"
-        android:text="Share your invition code to earn extra credits"
-        android:textSize="16.0sp" />
+        android:textStyle="bold"
+        android:gravity="center"
+        android:text="@string/title_share"
+        android:textSize="16sp" />
 
     <ListView
         android:id="@+id/lvShare"
@@ -23,13 +25,15 @@
         android:dividerHeight="2dp" >
     </ListView>
 
+    <!--style="@style/title_text_style"-->
     <TextView
-        style="@style/title_text_style"
         android:layout_width="fill_parent"
         android:layout_height="wrap_content"
         android:layout_margin="10dp"
+        android:textStyle="bold"
+        android:gravity="center"
         android:padding="5dp"
-        android:text="Both you and your friends will receive 200 credits"
-        android:textSize="16.0sp" />
+        android:text="Both you and your friends \n will receive 200 credits"
+        android:textSize="16sp" />
 
 </LinearLayout>

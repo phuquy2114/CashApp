@@ -97,19 +97,19 @@ public class TabHost extends RelativeLayout implements View.OnClickListener {
     public void onItemClickEvent(int position) {
         setDefault();
         if (position == 0) {
-            mViewTabOne.setBackgroundColor(0xFFFFFFFF);
+            mViewTabOne.setBackgroundColor(0xFFFF0000);
             mImgTabOne.setImageResource(R.drawable.icon_top_on);
             //mTxtTabOne.setTextColor(0xFF000000);
         } else if (position == 1) {
-            mViewTabTwo.setBackgroundColor(0xFFFFFFFF);
+            mViewTabTwo.setBackgroundColor(0xFFFFFF00);
             mImgTabOTwo.setImageResource(R.drawable.icon_payplay_on);
            // mTxtTabTwo.setTextColor(0xFF000000);
         } else if (position == 2) {
-            mViewTabThree.setBackgroundColor(0xFFFFFFFF);
+            mViewTabThree.setBackgroundColor(0xFF32CD32);
             mImgTabThree.setImageResource(R.drawable.icon_share_on);
            // mTxtTabThree.setTextColor(0xFF000000);
         } else if (position == 3) {
-            mViewTabFour.setBackgroundColor(0xFFFFFFFF);
+            mViewTabFour.setBackgroundColor(0xFF0000CD);
             mImgTabFour.setImageResource(R.drawable.icon_setting_on);
          //   mTxtTabFour.setTextColor(0xFF000000);
         } else {
