@@ -46,21 +46,15 @@ public class LoginActivity extends BaseActivity implements OnClickListener,Reque
 
     @Override
     protected void initialize() {
-        mViewPager = (ViewPager) findViewById(R.id.pager);
-        mCirclePageIndicator = (CirclePageIndicator) findViewById(R.id.indicator);
         tvRegister = (TextView) findViewById(R.id.tvRegister);
         edtEmail = (EditText) findViewById(R.id.edtEmail);
         edtPass = (EditText) findViewById(R.id.edtPass);
         btnLogin = (Button) findViewById(R.id.btnLogin);
-		mBtnLoginFacebook = (Button) findViewById(R.id.login_button_facebook);
 
     }
 
     @Override
     protected void setValue() {
-        mImagePagerAdapter = new ImagePagerAdapter(getApplicationContext());
-        mViewPager.setAdapter(mImagePagerAdapter);
-        mCirclePageIndicator.setViewPager(mViewPager);
 
         tvRegister.setPaintFlags(tvRegister.getPaintFlags() | Paint.UNDERLINE_TEXT_FLAG);
         tvRegister.setText("Dont Have an Account");
