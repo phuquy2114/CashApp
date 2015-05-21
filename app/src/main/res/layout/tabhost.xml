@@ -2,9 +2,10 @@
 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
     android:layout_height="match_parent">
+
     <View
         android:layout_width="match_parent"
-        android:layout_height="8dp"/>
+        android:layout_height="8dp" />
 
     <LinearLayout
         android:layout_width="match_parent"
@@ -25,16 +26,16 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_gravity="center"
+                android:layout_margin="10dp"
+                android:background="@android:color/transparent"
                 android:contentDescription="@string/app_name"
-                android:src="@drawable/ic_launcher"
-                android:background="@android:color/transparent"/>
+                android:src="@drawable/ic_launcher" />
 
             <TextView
-                android:id="@+id/txt_tab_one"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_gravity="center"
-                android:text="Offers" />
+                android:layout_width="match_parent"
+                android:layout_height="5dp"
+                android:background="#FF0000" />
+
         </LinearLayout>
 
         <LinearLayout
@@ -50,16 +51,16 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_gravity="center"
+                android:layout_margin="10dp"
+                android:background="@android:color/transparent"
                 android:contentDescription="@string/app_name"
-                android:src="@drawable/ic_launcher"
-                android:background="@android:color/transparent"/>
+                android:src="@drawable/ic_launcher" />
 
             <TextView
-                android:id="@+id/txt_tab_two"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_gravity="center"
-                android:text="Rewards" />
+                android:layout_width="match_parent"
+                android:layout_height="5dp"
+                android:background="#FFFF00" />
+
         </LinearLayout>
 
         <LinearLayout
@@ -75,16 +76,16 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_gravity="center"
+                android:layout_margin="10dp"
+                android:background="@android:color/transparent"
                 android:contentDescription="@string/app_name"
-                android:src="@drawable/ic_launcher"
-                android:background="@android:color/transparent"/>
+                android:src="@drawable/ic_launcher" />
 
             <TextView
-                android:id="@+id/txt_tab_three"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_gravity="center"
-                android:text="Share" />
+                android:layout_width="match_parent"
+                android:layout_height="5dp"
+                android:background="#32CD32" />
+
         </LinearLayout>
 
         <LinearLayout
@@ -100,16 +101,15 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_gravity="center"
+                android:layout_margin="10dp"
+                android:background="@android:color/transparent"
                 android:contentDescription="@string/app_name"
-                android:src="@drawable/ic_launcher"
-                android:background="@android:color/transparent"/>
+                android:src="@drawable/ic_launcher" />
 
             <TextView
-                android:id="@+id/txt_tab_four"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_gravity="center"
-                android:text="Settings" />
+                android:layout_width="match_parent"
+                android:layout_height="5dp"
+                android:background="#0000CD" />
         </LinearLayout>
     </LinearLayout>
 

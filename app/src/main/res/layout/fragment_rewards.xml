@@ -15,7 +15,7 @@
         android:id="@+id/lvPaypal"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:divider="@color/mainColor"
+        android:divider="@color/mainActionBar"
         android:dividerHeight="2dp"
         android:orientation="vertical" />
 

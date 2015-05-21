@@ -10,6 +10,7 @@ import android.phuquy.dev.cashmedia.Utils.Config;
 import android.phuquy.dev.cashmedia.adapter.ShareFragmentAdapter;
 import android.phuquy.dev.cashmedia.libraris.SecurePreferences;
 import android.support.v4.app.Fragment;
+import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -119,4 +120,9 @@ public class ShareFragment extends Fragment {
         startActivity(intent);
     }
 
+    @Override
+    public void onResume() {
+        super.onResume();
+        Log.d("qqq", "Share");
+    }
 }

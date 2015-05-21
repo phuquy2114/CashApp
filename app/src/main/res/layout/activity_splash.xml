@@ -5,12 +5,28 @@
     android:orientation="vertical"
     android:background="@drawable/background_splash">
 
+    <ProgressBar
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerInParent="true"/>
+
     <ImageView
         android:id="@+id/img_view"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_alignParentTop="true"
-        android:src="@drawable/logo_name" />
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="150dp"
+        android:src="@drawable/icon_logo_app_name" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/img_view"
+        android:textColor="@android:color/background_dark"
+        android:textSize="16sp"
+        android:layout_centerHorizontal="true"
+        android:text="Daily Campaign - Free App !"/>
+
     <TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
@@ -18,48 +34,8 @@
         android:layout_centerHorizontal="true"
         android:gravity="center_vertical"
         android:layout_marginBottom="20dp"
-        android:textSize="20sp"
+        android:textSize="24sp"
         android:textColor="@android:color/white"
         android:text="@string/title_splash_bottom"/>
 
-    <RelativeLayout
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_centerInParent="true"
-        android:layout_marginLeft="16dp"
-        android:layout_marginRight="16dp"
-        android:layout_marginTop="20dp"
-        android:background="@android:color/transparent"
-        android:orientation="horizontal">
-
-        <ProgressBar
-            android:id="@+id/progress_bar_one"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_alignParentLeft="true"
-            android:layout_centerVertical="true"
-            android:layout_gravity="left"
-            android:layout_marginLeft="16dp" />
-
-        <ImageView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_centerHorizontal="true"
-            android:layout_centerVertical="true"
-            android:layout_gravity="center"
-            android:src="@drawable/logo_name"
-            android:layout_marginLeft="70dp"
-            android:layout_marginRight="70dp"
-            android:background="@android:color/transparent"
-            android:textColor="@android:color/white" />
-
-        <ProgressBar
-            android:id="@+id/progress_bar_two"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_alignParentRight="true"
-            android:layout_centerVertical="true"
-            android:layout_gravity="right"
-            android:layout_marginRight="16dp" />
-    </RelativeLayout>
 </RelativeLayout>

@@ -8,6 +8,7 @@ import android.phuquy.dev.cashmedia.Utils.Config;
 import android.phuquy.dev.cashmedia.Utils.FragmentViewClickListener;
 import android.phuquy.dev.cashmedia.adapter.RewardAdapter;
 import android.support.v4.app.Fragment;
+import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -47,4 +48,9 @@ public class RewardsFragment extends Fragment {
 		listener = (FragmentViewClickListener) activity;
 	}
 
+	@Override
+	public void onResume() {
+		super.onResume();
+		Log.d("qqq", "Reward");
+	}
 }
