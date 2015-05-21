@@ -36,7 +36,6 @@ public class LoginActivity extends BaseActivity implements OnClickListener,Reque
     private ImagePagerAdapter  mImagePagerAdapter;
     private ViewPager mViewPager;
     private CirclePageIndicator mCirclePageIndicator;
-	private Button mBtnLoginFacebook;
 
 
 	@Override
@@ -57,7 +56,6 @@ public class LoginActivity extends BaseActivity implements OnClickListener,Reque
         edtEmail = (EditText) findViewById(R.id.edtEmail);
         edtPass = (EditText) findViewById(R.id.edtPass);
         btnLogin = (Button) findViewById(R.id.btnLogin);
-		mBtnLoginFacebook = (Button) findViewById(R.id.login_button_facebook);
 
     }
 
@@ -81,7 +79,6 @@ public class LoginActivity extends BaseActivity implements OnClickListener,Reque
     protected void setEvent() {
         btnLogin.setOnClickListener(this);
         tvRegister.setOnClickListener(this);
-		mBtnLoginFacebook.setOnClickListener(this);
     }
 
     @Override
@@ -103,10 +100,6 @@ public class LoginActivity extends BaseActivity implements OnClickListener,Reque
 		if (v.getId() == R.id.tvRegister) {
 			Intent intent = new Intent(LoginActivity.this,RegisterActivity.class);
 			startActivity(intent);
-		}
-
-		if (v.getId()== R.id.login_button_facebook){
-			Toast.makeText(getApplicationContext(),"Not Finish LoginFacebook",Toast.LENGTH_SHORT).show();
 		}
 	}
 
