@@ -3,20 +3,21 @@
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
     android:orientation="vertical"
-    android:padding="10dp" >
+    android:padding="10dp">
 
     <TextView
         style="@style/title_text_style"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
+        android:layout_height="50dp"
+        android:textStyle="bold"
         android:text="Paypal Cash" />
 
     <ListView
         android:id="@+id/lvPaypal"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:divider="@color/mainActionBar"
-        android:dividerHeight="2dp"
+        android:divider="@android:color/transparent"
+        android:dividerHeight="5dp"
         android:orientation="vertical" />
 
 </LinearLayout>

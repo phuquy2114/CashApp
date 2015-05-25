@@ -21,8 +21,8 @@
         android:layout_height="wrap_content"
         android:layout_marginLeft="10dp"
         android:layout_marginRight="10dp"
-        android:divider="@color/mainColor"
-        android:dividerHeight="2dp" >
+        android:divider="@android:color/transparent"
+        android:dividerHeight="10dp" >
     </ListView>
 
     <!--style="@style/title_text_style"-->

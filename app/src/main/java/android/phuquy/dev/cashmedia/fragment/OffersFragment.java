@@ -1,30 +1,49 @@
 package android.phuquy.dev.cashmedia.fragment;
 
+import android.app.ProgressDialog;
 import android.content.Intent;
 import android.net.Uri;
+import android.os.AsyncTask;
 import android.os.Bundle;
 import android.phuquy.dev.cashmedia.BannerOffersActivity;
+import android.phuquy.dev.cashmedia.MainActivity;
 import android.phuquy.dev.cashmedia.R;
 import android.phuquy.dev.cashmedia.Utils.Config;
+import android.phuquy.dev.cashmedia.Utils.JSONParser;
+import android.phuquy.dev.cashmedia.adapter.BannerOffersAdapter;
 import android.phuquy.dev.cashmedia.adapter.NetworkAdapter;
 import android.phuquy.dev.cashmedia.libraris.SecurePreferences;
+import android.phuquy.dev.cashmedia.model.BannerOffers;
+import android.phuquy.dev.cashmedia.model.Offer;
 import android.support.v4.app.ListFragment;
-import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.AdapterView;
 import android.widget.ListView;
+import android.widget.TextView;
 import android.widget.Toast;
 
+import com.google.gson.Gson;
 import com.supersonicads.sdk.SSAFactory;
 import com.supersonicads.sdk.SSAPublisher;
 import com.supersonicads.sdk.listeners.OnOfferWallListener;
+
+import org.json.JSONException;
+import org.json.JSONObject;
+
+import java.util.ArrayList;
+import java.util.HashMap;
+import java.util.List;
 
 public class OffersFragment extends ListFragment {
 
     private SecurePreferences ref;
     private String userid;
     private SSAPublisher ssaPub;
+    private TextView noOffer;
+    private ListView lvOffer;
+    private List<Offer> offers = new ArrayList<Offer>();
 
     // private static final int OFFERWALL_REQUEST_CODE = 1243;
 
@@ -37,7 +56,12 @@ public class OffersFragment extends ListFragment {
                 Config.PREFERENCES_KEY, true);
         userid = ref.getString("uid");
         ssaPub = SSAFactory.getPublisherInstance(getActivity());
+
+        noOffer = (TextView) view.findViewById(R.id.nooffer);
+        lvOffer = (ListView) view.findViewById(R.id.banners);
         // Woobi.init(getActivity(),"14938", null);
+
+        new GetOffer().execute();
         return view;
     }
 
@@ -47,6 +71,7 @@ public class OffersFragment extends ListFragment {
         NetworkAdapter adapter = new NetworkAdapter(getActivity(),
                 R.layout.offers_item, Config.NET_NAME);
         setListAdapter(adapter);
+
     }
 
     @Override
@@ -66,7 +91,7 @@ public class OffersFragment extends ListFragment {
                 supperreward();
                 break;
             case 4:
-                banners();
+              //  banners();
                 break;
         }
     }
@@ -187,7 +212,6 @@ public class OffersFragment extends ListFragment {
     public void onResume() {
         super.onResume();
 //        ((MainActivity) getActivity()).setHeaderTitle("Offers");
-        Log.d("qqq","Offter");
         if (ssaPub != null)
             ssaPub.onResume(getActivity());
         // try {
@@ -209,5 +233,76 @@ public class OffersFragment extends ListFragment {
         //
         // });
     }
+
+
+    private class GetOffer extends AsyncTask<Void, Void, String> implements AdapterView.OnItemClickListener {
+        ProgressDialog dialog;
+        @Override
+        protected void onPreExecute() {
+            super.onPreExecute();
+            dialog = new ProgressDialog(getActivity());
+            dialog.setMessage("Loading offers...");
+            dialog.setCancelable(false);
+            dialog.show();
+        }
+
+        @Override
+        protected String doInBackground(Void... params) {
+            String result = null;
+            try {
+                JSONObject ipApi = new JSONObject(JSONParser.makeHttpRequest("http://ip-api.com/json", null));
+                if (ipApi.getString("status").equalsIgnoreCase("success")) {
+                    String countryCode = ipApi.getString("countryCode");
+                    HashMap<String, String> data = new HashMap<String, String>();
+                    data.put("country", countryCode);
+                    data.put(Config.TAG_CONTROLLER, "GetOffers");
+                    result = JSONParser.makeHttpRequest(MainActivity.getLink(), data);
+                }
+            } catch (JSONException e) {
+                e.printStackTrace();
+                return result;
+            }
+            return result;
+        }
+        @Override
+        protected void onPostExecute(String result) {
+            super.onPostExecute(result);
+            dialog.dismiss();
+            if(result == null){
+                noOffer.setVisibility(View.VISIBLE);
+                return;
+            }
+            try {
+                BannerOffers bannerOff = new Gson().fromJson(result, BannerOffers.class);
+                int success = bannerOff.getSuccess();
+                if (success == 0){
+                    noOffer.setVisibility(View.VISIBLE);
+                }else{
+                    offers = bannerOff.getOffers();
+                    if(offers.size() == 0){
+                        noOffer.setVisibility(View.VISIBLE);
+                    }else{
+                        BannerOffersAdapter adapter = new BannerOffersAdapter(getActivity(), R.layout.banner_item, offers);
+                        lvOffer.setAdapter(adapter);
+                        lvOffer.setOnItemClickListener(this);
+                    }
+                }
+            } catch (Exception e) {
+                noOffer.setVisibility(View.VISIBLE);
+                e.printStackTrace();
+            }
+        }
+
+        @Override
+        public void onItemClick(AdapterView<?> parent, View view, int position, long ids) {
+            String id = offers.get(position).getOfferId();
+            SecurePreferences ref = new SecurePreferences(getActivity(),Config.PREFERENCES_NAME,Config.PREFERENCES_KEY,true);
+            String uid = ref.getString("uid");
+            String link = new StringBuilder(MainActivity.getLink()).append("gooffer.php?oid=").append(id).append("&uid=").append(uid).toString();
+            Intent i = new Intent(Intent.ACTION_VIEW, Uri.parse(link));
+            startActivity(i);
+        }
+    }
+
 
 }

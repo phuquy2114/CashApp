@@ -9,6 +9,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_margin="10dp"
+        android:textStyle="bold"
         android:textColor="@color/mainColor"
         android:textSize="16.0sp" />
 
@@ -17,6 +18,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginLeft="10dp"
+        android:textStyle="bold"
         android:textColor="@color/mainColor"
         android:textSize="16.0sp" />
 
@@ -25,6 +27,7 @@
         android:layout_height="wrap_content"
         android:layout_marginLeft="10dp"
         android:layout_marginTop="10dp"
+        android:textStyle="bold"
         android:text="Your friend&apos;s invitation code:"
         android:textSize="16.0sp" />
 
@@ -49,13 +52,14 @@
             android:paddingLeft="7.0dip"
             android:paddingRight="7.0dip"
             android:text="Enter"
+            android:typeface="serif"
             android:textColor="#fff55630"
             android:textSize="16.0sp" />
 
         <EditText
             android:id="@+id/edtInput_inv_code"
             android:layout_width="fill_parent"
-            android:layout_height="27dp"
+            android:layout_height="40dp"
             android:layout_centerVertical="true"
             android:layout_marginBottom="10dp"
             android:layout_marginLeft="10dp"
@@ -63,6 +67,7 @@
             android:layout_toLeftOf="@+id/btnEnter_code"
             android:background="@drawable/edittext_bg"
             android:inputType="text"
+            android:hint="please input code"
             android:paddingLeft="10dp"
             android:singleLine="true"
             android:textSize="14sp" />
@@ -71,7 +76,7 @@
     <TextView
         style="@style/title_text_style"
         android:layout_width="fill_parent"
-        android:layout_height="wrap_content"
+        android:layout_height="50dp"
         android:layout_marginLeft="10dp"
         android:layout_marginRight="10dp"
         android:text="Settings"
@@ -84,8 +89,8 @@
         android:layout_marginLeft="10dp"
         android:layout_marginRight="10dp"
         android:layout_weight="1"
-        android:divider="@color/mainColor"
-        android:dividerHeight="2dp" >
+        android:divider="@android:color/black"
+        android:dividerHeight="5dp" >
     </ListView>
 
 </LinearLayout>
