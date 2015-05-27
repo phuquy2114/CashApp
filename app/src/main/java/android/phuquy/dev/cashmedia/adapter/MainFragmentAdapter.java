@@ -1,6 +1,6 @@
 package android.phuquy.dev.cashmedia.adapter;
 
-import android.phuquy.dev.cashmedia.fragment.OffersFragment;
+import android.phuquy.dev.cashmedia.fragment.OffersFragmentMain;
 import android.phuquy.dev.cashmedia.fragment.RewardsFragment;
 import android.phuquy.dev.cashmedia.fragment.SettingFragment;
 import android.phuquy.dev.cashmedia.fragment.ShareFragment;
@@ -15,14 +15,14 @@ public class MainFragmentAdapter extends FragmentStatePagerAdapter {
 
     public static int COUNT = 4;
 
-    private OffersFragment mOffersFragment;
+    private OffersFragmentMain mOffersFragmentMain;
     private RewardsFragment mRewardsFragment;
     private ShareFragment mShareFragment;
     private SettingFragment mSettingFragment;
 
     public MainFragmentAdapter(FragmentManager fm) {
         super(fm);
-        mOffersFragment = new OffersFragment();
+        mOffersFragmentMain = new OffersFragmentMain();
         mRewardsFragment = new RewardsFragment();
         mShareFragment = new ShareFragment();
         mSettingFragment = new SettingFragment();
@@ -34,7 +34,7 @@ public class MainFragmentAdapter extends FragmentStatePagerAdapter {
     public Fragment getItem(int position) {
         switch (position){
             case 0:
-                return mOffersFragment;
+                return mOffersFragmentMain;
             case 1:
                 return mRewardsFragment;
             case 2:

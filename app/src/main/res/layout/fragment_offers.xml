@@ -14,10 +14,6 @@
         android:paddingLeft="10dp"
         android:paddingRight="10dp" />
 
-    <include
-        layout="@layout/banner_offers"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_marginLeft="20dp" />
+
 
 </LinearLayout>
