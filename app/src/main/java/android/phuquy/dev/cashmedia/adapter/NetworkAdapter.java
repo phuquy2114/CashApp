@@ -38,9 +38,8 @@ public class NetworkAdapter extends ArrayAdapter<String>{
 			rowView.setTag(viewHolder);
 		}
 		ViewHolder holder = (ViewHolder) rowView.getTag();
-		holder.icon.setImageResource(Config.NET_ICON[position]);
-		holder.netName.setText(data[position]);
-		
+			holder.icon.setImageResource(Config.NET_ICON[position]);
+			holder.netName.setText(data[position]);
 		return rowView;
 	}
 
