@@ -14,6 +14,7 @@ public class Config {
 	public static final int NET_ICON[] = {R.drawable.ic_supersonic,R.drawable.ic_matomy,R.drawable.ic_radium,R.drawable.ic_launcher};
 	public static final String NET_NAME[] ={"SuperSonic","Matomy","RadiumOne","Super Reward"};
 	public static final String[] POINTS = { "1000","2000", "5000", "10000", "25000" };
+	public static final String REWARD_ICON [] = {};
 	public static final String[] PP_REWARDS = { "1$ Paypal USD Cash","$2 Paypal USD Cash",
 			"$5 Paypal USD Cash", "$10 Paypal USD Cash", "$25 Paypal USD Cash" };
 	
