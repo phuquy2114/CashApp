@@ -17,7 +17,7 @@
             android:layout_height="120dp"
             android:layout_gravity="center_horizontal"
             android:layout_marginTop="40dp"
-            android:src="@drawable/paypal"
+            android:src="@drawable/ic_reward_big"
             tools:ignore="ContentDescription" />
 
         <TextView
@@ -34,7 +34,7 @@
             android:layout_height="wrap_content"
             android:layout_gravity="center_horizontal"
             android:layout_marginTop="40dp"
-            android:text="Your Paypal Account" />
+            android:text="Your Account" />
 
         <EditText
             android:id="@+id/edtAddress"
@@ -69,7 +69,7 @@
             android:layout_height="wrap_content"
             android:layout_marginLeft="@dimen/activity_horizontal_margin"
             android:layout_marginTop="5dp"
-            android:text="Please enter your paypal account.You will receive your rewards within 48h."
+            android:text="Please enter your account.You will receive your rewards within 48h."
             android:textSize="12sp" />
     </LinearLayout>
 

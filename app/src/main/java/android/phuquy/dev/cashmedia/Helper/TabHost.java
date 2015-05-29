@@ -75,7 +75,7 @@ public class TabHost extends RelativeLayout implements View.OnClickListener {
         //mTxtTabOne.setTextColor(0xFF33691E);
 
         mViewTabTwo.setBackgroundColor(0xFFe78c28);
-        mImgTabOTwo.setImageResource(R.drawable.icon_payplay_off);
+        mImgTabOTwo.setImageResource(R.drawable.ic_rewards);
       //  mTxtTabTwo.setTextColor(0xFF33691E);
 
         mViewTabThree.setBackgroundColor(0xFFe78c28);
@@ -102,7 +102,7 @@ public class TabHost extends RelativeLayout implements View.OnClickListener {
             //mTxtTabOne.setTextColor(0xFF000000);
         } else if (position == 1) {
             mViewTabTwo.setBackgroundColor(0xFFFFFF00);
-            mImgTabOTwo.setImageResource(R.drawable.icon_payplay_on);
+            mImgTabOTwo.setImageResource(R.drawable.ic_rewards);
            // mTxtTabTwo.setTextColor(0xFF000000);
         } else if (position == 2) {
             mViewTabThree.setBackgroundColor(0xFF32CD32);

@@ -23,8 +23,8 @@
 
             <ImageView
                 android:id="@+id/img_tab_one"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
+                android:layout_width="25dp"
+                android:layout_height="25dp"
                 android:layout_gravity="center"
                 android:layout_margin="10dp"
                 android:background="@android:color/transparent"
@@ -48,13 +48,13 @@
 
             <ImageView
                 android:id="@+id/img_tab_two"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
+                android:layout_width="25dp"
+                android:layout_height="25dp"
                 android:layout_gravity="center"
                 android:layout_margin="10dp"
                 android:background="@android:color/transparent"
                 android:contentDescription="@string/app_name"
-                android:src="@drawable/ic_launcher" />
+                android:src="@drawable/ic_rewards" />
 
             <TextView
                 android:layout_width="match_parent"
@@ -73,8 +73,8 @@
 
             <ImageView
                 android:id="@+id/img_tab_three"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
+                android:layout_width="25dp"
+                android:layout_height="25dp"
                 android:layout_gravity="center"
                 android:layout_margin="10dp"
                 android:background="@android:color/transparent"
@@ -98,8 +98,8 @@
 
             <ImageView
                 android:id="@+id/img_tab_four"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
+                android:layout_width="25dp"
+                android:layout_height="25dp"
                 android:layout_gravity="center"
                 android:layout_margin="10dp"
                 android:background="@android:color/transparent"
