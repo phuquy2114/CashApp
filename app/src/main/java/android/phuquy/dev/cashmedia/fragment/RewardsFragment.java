@@ -47,23 +47,16 @@ public class RewardsFragment extends Fragment {
             public void onScroll(AbsListView view, int firstVisibleItem, int visibleItemCount, int totalItemCount) {
                 Log.d(TAG, "firstVisibleItem" + firstVisibleItem);
                 if (firstVisibleItem < 4) {
-                    mTxtTitle.setText("PayPal Cash");
-                } else if (firstVisibleItem > 4 && firstVisibleItem < 9) {
                     mTxtTitle.setText("iTunes Cash");
-
-                } else if (firstVisibleItem > 9 && firstVisibleItem < 14) {
+                } else if (firstVisibleItem > 4 && firstVisibleItem < 9) {
                     mTxtTitle.setText("Amazon Cash");
-
-                } else if (firstVisibleItem > 14 && firstVisibleItem < 18) {
+                } else if (firstVisibleItem > 9 && firstVisibleItem < 13) {
                     mTxtTitle.setText("eBays Cash");
-
-                } else if (firstVisibleItem > 19 && firstVisibleItem < 21) {
+                } else if (firstVisibleItem > 13 && firstVisibleItem < 17) {
                     mTxtTitle.setText("Google Play Cash");
-
-                } else if (firstVisibleItem > 21 && firstVisibleItem < 23) {
+                } else if (firstVisibleItem > 17 && firstVisibleItem < 19) {
                     mTxtTitle.setText("Game Stop Cash");
-
-                } else if (firstVisibleItem > 23) {
+                } else if (firstVisibleItem > 19) {
                     mTxtTitle.setText("Other");
                 }
 //				Log.d(TAG,""+totalItemCount);
