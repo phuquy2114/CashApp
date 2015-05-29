@@ -6,16 +6,18 @@
     android:padding="10dp">
 
     <TextView
+        android:id="@+id/title_reward"
         style="@style/title_text_style"
         android:layout_width="match_parent"
         android:layout_height="50dp"
-        android:textStyle="bold"
-        android:text="Paypal Cash" />
+        android:text="Paypal Cash"
+        android:textStyle="bold" />
 
     <ListView
         android:id="@+id/lvPaypal"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
         android:divider="@android:color/transparent"
         android:dividerHeight="5dp"
         android:orientation="vertical" />
