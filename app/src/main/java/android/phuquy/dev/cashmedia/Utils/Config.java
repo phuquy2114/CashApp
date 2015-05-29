@@ -19,11 +19,11 @@ public class Config {
             , "2000", "5000", "10000", "25000"
             , "5000", "10000", "25000"
             , "5000", "10000"
+            , "10000"
+            , "10000"
+            , "25000"
             , "5000"
-            , "5000"
-            , "5000"
-            , "5000"
-            , "5000"
+            , "10000"
             , "5000"
             , "10000"
             , "10000"
@@ -50,11 +50,11 @@ public class Config {
             "$2 eBays Gift Cash", "$5 eBays Gift Cash", "$10 eBays Gift Cash", "$25 eBays Gift Cash",
             "$5 Google Play Gift Cash", "$10 Google Play Gift Cash", "$25 Google Play Gift Cash",
             "$5 GameStop Gift Cash", "$10 GameStop Gift Cash",
-            "$5 Rixty Gift Cash",
-            "$5 Trion Gift Cash",
-            "$5 Best Buy Gift Cash",
+            "$10 Rixty Gift Cash",
+            "$10 Trion Gift Cash",
+            "$25 Best Buy Gift Cash",
             "$5 XBox Digital Gift Cash",
-            "$5 Gap Gift Cash",
+            "$10 Gap Gift Cash",
             "$5 Applebee's Gift Cash",
             "$10 Sears Gift Cash",
             "$10 Starbucks Gift Cash",
