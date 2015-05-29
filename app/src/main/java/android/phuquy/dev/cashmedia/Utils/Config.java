@@ -30,7 +30,7 @@ public class Config {
 
     };
     public static final int REWARD_ICON[] = {
-            R.drawable.ic_itunes, R.drawable.ic_itunes, R.drawable.ic_itunes, R.drawable.ic_itunes, R.drawable.ic_itunes,
+            R.drawable.ic_itunes_vs, R.drawable.ic_itunes_vs, R.drawable.ic_itunes_vs, R.drawable.ic_itunes_vs, R.drawable.ic_itunes_vs,
             R.drawable.ic_amazon_version, R.drawable.ic_amazon_version, R.drawable.ic_amazon_version, R.drawable.ic_amazon_version, R.drawable.ic_amazon_version,
             R.drawable.ic_ebay, R.drawable.ic_ebay, R.drawable.ic_ebay, R.drawable.ic_ebay,
             R.drawable.ic_googleplay, R.drawable.ic_googleplay, R.drawable.ic_googleplay,
