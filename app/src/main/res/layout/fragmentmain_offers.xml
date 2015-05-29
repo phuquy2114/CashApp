@@ -13,6 +13,21 @@
         android:weightSum="2">
 
         <Button
+            android:id="@+id/btn_banners"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:background="@drawable/item_lsit_customs"
+            android:text="Banners"
+            android:textStyle="bold" />
+
+        <View
+            android:layout_width="5dp"
+            android:layout_height="1dp"/>
+
+
+
+        <Button
             android:id="@+id/btn_wall"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
@@ -21,18 +36,6 @@
             android:background="@drawable/item_lsit_customs"
             android:text="Wall" />
 
-        <View
-            android:layout_width="5dp"
-            android:layout_height="1dp"/>
-
-        <Button
-            android:id="@+id/btn_banners"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_weight="1"
-            android:background="@drawable/item_lsit_customs"
-            android:text="Banners"
-            android:textStyle="bold" />
     </LinearLayout>
 
     <FrameLayout

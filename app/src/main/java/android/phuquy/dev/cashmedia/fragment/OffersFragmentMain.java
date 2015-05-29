@@ -40,7 +40,7 @@ public class OffersFragmentMain extends BaseFragment implements View.OnClickList
         initialize();
         setValues();
         setEvents();
-        setFragmentLayout(new OffersFragment());
+        setFragmentLayout(new OffersBannersFragment());
         return mView;
     }
 
