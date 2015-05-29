@@ -28,7 +28,7 @@ public class RewardsFragment extends Fragment {
 		listview = (ListView) view.findViewById(R.id.lvPaypal);
 
 		RewardAdapter adapter = new RewardAdapter(getActivity(),
-				R.layout.rewards_items, Config.PP_REWARDS);
+				R.layout.rewards_items,Config.REWARD_ICON, Config.PP_REWARDS);
 		listview.setAdapter(adapter);
 		listview.setOnItemClickListener(new OnItemClickListener() {
 
