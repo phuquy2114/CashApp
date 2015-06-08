@@ -5,7 +5,7 @@ android {
     buildToolsVersion "21.1.2"
 
     defaultConfig {
-        applicationId "android.phuquy.dev.cashmedia"
+        applicationId "com.quoc.long87.cashmedia"
         minSdkVersion 13
         targetSdkVersion 21
         versionCode 1
